@@ -1,0 +1,6 @@
+FROM /models/sea-lion-7b-instruct-Q8_0.gguf
+TEMPLATE """{{ if .System }}System: {{ .System }}{{ end }}
+### USER:
+{{ .Prompt }}
+
+### RESPONSE:"""

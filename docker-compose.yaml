@@ -1,0 +1,39 @@
+services:
+  ollama:
+    image: ollama/ollama
+    restart: no
+    expose:
+      - 11434/tcp
+    ports:
+      - 11434:11434/tcp
+    healthcheck:
+      test: ollama --version || exit 1
+    command: serve
+    volumes:
+      - ollama:/root/.ollama
+      - ${MODELS_PATH:-./models}:/models
+      - ./sealion/Modelfile:/Modelfile
+    networks:
+      - ollama-network
+
+  chainlit:
+    build: .
+    container_name: chainlit
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ollama
+    restart: unless-stopped
+    volumes:
+      - .:/usr/src/app/
+    networks:
+      - ollama-network
+
+# Docker Volumes
+volumes:
+  ollama:
+
+# Docker Networks
+networks:
+  ollama-network:
+    driver: bridge
