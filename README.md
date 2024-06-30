@@ -30,8 +30,8 @@
   docker compose exec ollama ollama create sealion -f Modelfile
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
-<img width="600" alt="sealion_chatbot_01" src="https://github.com/ren-lee/sealion-chainlit-ollama/assets/62876165/61cc8ea3-4a5b-4563-aa41-9947ba6d8915">
-<img width="600" alt="sealion_chatbot_02" src="https://github.com/ren-lee/sealion-chainlit-ollama/assets/62876165/a0cc75a7-b67a-4255-aaf4-95e8223b29cb">
+<img width="858" alt="sealion_chatbot_01" src="https://github.com/aisingapore/sealion-chainlit-ollama/assets/62876165/5f18ff8f-8777-4c4e-8231-658796100419">
+<img width="858" alt="sealion_chatbot_02" src="https://github.com/aisingapore/sealion-chainlit-ollama/assets/62876165/7d528ec9-604b-4bf1-bd34-a7589bfff433">
 
 ## Default Model
 - The default model is [sea-lion-7b-instruct-Q8_0.gguf](https://huggingface.co/aisingapore/sea-lion-7b-instruct-gguf/blob/main/sea-lion-7b-instruct-Q8_0.gguf). This project is tested on a MacBook Pro with 2.3 GHz Quad-Core Intel Core i7 CPU and 32 GB 3733 MHz LPDDR4X RAM.
