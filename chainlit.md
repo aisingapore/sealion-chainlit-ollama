@@ -1,5 +1,4 @@
-![AI Singapore](https://aisingapore.org/wp-content/uploads/2022/11/AISGR-Horizontal-Logo-CMYK-Full-Colour-1-2-2048x385.png)
-# Welcome to AI Singapore Chat! 🤖
+# Welcome to the AI Singapore SEA-LION Chat! 🤖
 
 ### Links 🔗
 

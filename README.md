@@ -30,7 +30,6 @@
   docker compose exec ollama ollama create sealion -f Modelfile
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
-<img width="858" alt="sealion_chatbot_01" src="https://github.com/aisingapore/sealion-chainlit-ollama/assets/62876165/5f18ff8f-8777-4c4e-8231-658796100419">
 <img width="858" alt="sealion_chatbot_02" src="https://github.com/aisingapore/sealion-chainlit-ollama/assets/62876165/7d528ec9-604b-4bf1-bd34-a7589bfff433">
 
 ## Default Model
