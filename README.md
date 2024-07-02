@@ -10,7 +10,9 @@
 
 # Prerequisites
 - [Docker](https://docs.docker.com/engine/install/)
-  - Set the Docker memory limit to exceed the memory requirements of the largest model that you are testing.
+  - For the default [model](https://huggingface.co/aisingapore/sea-lion-7b-instruct-gguf/blob/main/sea-lion-7b-instruct-Q8_0.gguf), set the memory limit to 9GB or more.
+  - If a larger model is used, or if there are other active Docker containers in the environment, increase the memory limit further to take into account their memory requirements.
+    <img width="600" alt="docker-memory-limit" src="https://github.com/aisingapore/sealion-chainlit-ollama/assets/62876165/a4268b5f-4ba8-46f4-8460-5d93ace3a455">
 
 ## Getting Started
 - Download the SEA-LION model. The size of the default [model](https://huggingface.co/aisingapore/sea-lion-7b-instruct-gguf/blob/main/sea-lion-7b-instruct-Q8_0.gguf) is 8GB. Please ensure that there is sufficient storage space and a good internet connection before proceeding:
