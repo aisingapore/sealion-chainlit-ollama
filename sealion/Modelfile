@@ -1,6 +1,9 @@
 FROM /models/sea-lion-7b-instruct-Q8_0.gguf
-TEMPLATE """{{ if .System }}System: {{ .System }}{{ end }}
-### USER:
+PARAMETER stop "<|endoftext|>"
+PARAMETER stop "### USER:"
+PARAMETER stop "### RESPONSE:"
+TEMPLATE """### USER:
 {{ .Prompt }}
-
-### RESPONSE:"""
+### RESPONSE:
+{{ .Response }}
+"""
