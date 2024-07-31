@@ -12,7 +12,7 @@
 - [Docker](https://docs.docker.com/engine/install/)
   - For the default [model](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf), set the memory limit to 6GB or more.
   - If a larger model is used, or if there are other active Docker containers in the environment, increase the memory limit further to take into account their memory requirements.
-    <img width="600" alt="docker-memory-limit" src="https://github.com/aisingapore/sealion-chainlit-ollama/assets/62876165/a4268b5f-4ba8-46f4-8460-5d93ace3a455">
+    <img width="600" alt="docker_resources" src="https://github.com/user-attachments/assets/069da8c8-66e9-4a9a-9820-9e2fcb5430f9">
 
 ## Getting Started
 - Download the SEA-LION model. The size of the default [model](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf) is 5GB. Please ensure that there is sufficient storage space and a good internet connection before proceeding:
@@ -32,7 +32,8 @@
   docker compose exec ollama ollama create llama3-8b-cpt-sealionv2 -f Modelfile
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
-<img width="858" alt="sealion_chatbot_02" src="https://github.com/aisingapore/sealion-chainlit-ollama/assets/62876165/7d528ec9-604b-4bf1-bd34-a7589bfff433">
+  <img width="924" alt="image" src="https://github.com/user-attachments/assets/517c527c-e730-434a-bb35-1550b938ffa2">
+
 
 ## Default Model
 - The default model is [llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf). This project is tested on a 14-inch 2023 MacBook Pro M3 Max with 64GB RAM.
