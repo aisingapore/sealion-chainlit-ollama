@@ -10,12 +10,12 @@
 
 # Prerequisites
 - [Docker](https://docs.docker.com/engine/install/)
-  - For the default [model](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf), set the memory limit to 9GB or more.
+  - For the default [model](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf), set the memory limit to 6GB or more.
   - If a larger model is used, or if there are other active Docker containers in the environment, increase the memory limit further to take into account their memory requirements.
     <img width="600" alt="docker-memory-limit" src="https://github.com/aisingapore/sealion-chainlit-ollama/assets/62876165/a4268b5f-4ba8-46f4-8460-5d93ace3a455">
 
 ## Getting Started
-- Download the SEA-LION model. The size of the default [model](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf) is 8GB. Please ensure that there is sufficient storage space and a good internet connection before proceeding:
+- Download the SEA-LION model. The size of the default [model](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf) is 5GB. Please ensure that there is sufficient storage space and a good internet connection before proceeding:
   ```bash
   ./scripts/download_sealion.sh
   ```
