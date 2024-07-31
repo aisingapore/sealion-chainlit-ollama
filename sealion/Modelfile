@@ -1,9 +1,10 @@
-FROM /models/sea-lion-7b-instruct-Q8_0.gguf
-PARAMETER stop "<|endoftext|>"
-PARAMETER stop "### USER:"
-PARAMETER stop "### RESPONSE:"
-TEMPLATE """### USER:
-{{ .Prompt }}
-### RESPONSE:
-{{ .Response }}
+FROM /models/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf
+TEMPLATE """
+{{ if .System }}<|start_header_id|>system<|end_header_id|>
+
+{{ .System }}<|eot_id|>{{ end }}{{ if .Prompt }}<|start_header_id|>user<|end_header_id|>
+
+{{ .Prompt }}<|eot_id|>{{ end }}<|start_header_id|>assistant<|end_header_id|>
+
+{{ .Response }}<|eot_id|>
 """
