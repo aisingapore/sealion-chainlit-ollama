@@ -1,7 +1,7 @@
 services:
   ollama:
     image: ollama/ollama
-    restart: no
+    restart: unless-stopped
     expose:
       - 11434/tcp
     ports:
