@@ -2,8 +2,9 @@
 
 ## Meet the Cast
 - [AI Singapore SEA-LION](https://github.com/aisingapore/sealion)
+  - Model: https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2-instruct
 - [Chainlit](https://github.com/Chainlit/chainlit)
-- [Ollama](https://github.com/ollama/ollama/blob/main/README.md#customize-a-model)
+- [Ollama](https://ollama.com/)
 
 > [!NOTE]  
 > This project is designed for local environments. Do not run it in production.
@@ -15,10 +16,6 @@
     <img width="600" alt="docker_resources" src="https://github.com/user-attachments/assets/069da8c8-66e9-4a9a-9820-9e2fcb5430f9">
 
 ## Getting Started
-- Download the SEA-LION model. The size of the default [model](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf) is 5GB. Please ensure that there is sufficient storage space and a good internet connection before proceeding:
-  ```bash
-  ./scripts/download_sealion.sh
-  ```
 - Copy ```.env``` and update the values, if necessary:
   ```bash
   cp .env.example .env
@@ -37,14 +34,14 @@
 
 ## Default Model
 - The default model is [llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf). This project is tested on a 14-inch 2023 MacBook Pro M3 Max with 64GB RAM.
-- If you would like to test the other models, choose the model in https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf.
-  - Update the model filename in  ```download_sealion.sh``` in the ```scripts``` directory. Download the model with the script.
+- If you would like to test the other models, choose the model in https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2-instruct.
+  - Pull the model with Ollama. For example:
     ```bash
-    ./scripts/download_sealion.sh
+    docker compose exec ollama ollama pull aisingapore/llama3-8b-cpt-sea-lionv2-instruct:q8_0
     ```
-  - Update the model filename in ```Modelfile``` in the ```sealion``` directory. Load the model in Ollama:
-    ```bash
-    docker compose exec ollama ollama create llama3-8b-cpt-sealionv2 -f Modelfile
+  - Update the model name in  `.env`. For example:
+    ```
+    LLM_MODEL=aisingapore/llama3-8b-cpt-sea-lionv2-instruct:q8_0
     ```
 
 ## Customisations
