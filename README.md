@@ -10,7 +10,7 @@
 
 # Prerequisites
 - [Docker](https://docs.docker.com/engine/install/)
-  - For the default [model](https://huggingface.co/aisingapore/llama3-8b-cpt-sealionv2-instruct-gguf/blob/main/llama3-8B-cpt-sealionv2-instruct-Q4_K_M.gguf), set the memory limit to 6GB or more.
+  - For the default [model](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2-instruct), set the memory limit to 8GB or more.
   - If a larger model is used, or if there are other active Docker containers in the environment, increase the memory limit further to take into account their memory requirements.
     <img width="600" alt="docker_resources" src="https://github.com/user-attachments/assets/069da8c8-66e9-4a9a-9820-9e2fcb5430f9">
 
@@ -27,9 +27,9 @@
   ```bash
   docker compose up
   ```
-- Load the SEA-LION model in Ollama:
+- Pull the SEA-LION model with Ollama:
   ```bash
-  docker compose exec ollama ollama create llama3-8b-cpt-sealionv2 -f Modelfile
+  docker compose exec ollama ollama pull aisingapore/llama3-8b-cpt-sea-lionv2-instruct
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
   <img width="924" alt="image" src="https://github.com/user-attachments/assets/517c527c-e730-434a-bb35-1550b938ffa2">
