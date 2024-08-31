@@ -81,9 +81,6 @@ target/
 venv/
 .cache
 
-# PyCharm
-.idea
-
 # Vim swap files
 **/*.swp
 
