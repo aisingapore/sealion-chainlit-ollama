@@ -1,0 +1,88 @@
+# Git
+.git
+.gitignore
+.gitattributes
+.github
+
+# Docker
+compose*.yml
+compose*.yaml
+docker-compose.yml
+docker-compose.yaml
+docker-compose*.yml
+docker-compose*.yaml
+Dockerfile
+.docker
+.dockerignore
+
+# Byte-compiled/optimised/DLL files
+**/__pycache__/
+**/*.py[cod]
+
+# C extensions
+*.so
+
+# CI
+.codeclimate.yml
+.travis.yml
+.taskcluster.yml
+
+# Distribution/packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test/coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Logs
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Environments
+.env.example
+.venv/
+venv/
+.cache
+
+# Vim swap files
+**/*.swp
+
+# Editors
+.editorconfig
+.idea
+.vscode
