@@ -33,7 +33,7 @@
 
 
 ## Default Model
-- The default model is [llama3-8b-cpt-sea-lionv2-instruct:q4_k_m](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m).
+- The default model is [llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m).
 - If you would like to test the other models, choose the model in https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct.
   - Check that there is sufficient disk storage and memory. For example, [llama3-8b-cpt-sea-lionv2.1-instruct:q8_0](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct:q8_0) requires 8.5GB of disk storage and 9.3GB of available memory in Docker.
   - Pull the model with Ollama.
