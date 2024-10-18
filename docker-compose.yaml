@@ -11,8 +11,6 @@ services:
     command: serve
     volumes:
       - ollama:/root/.ollama
-      - ${MODELS_PATH:-./models}:/models
-      - ./sealion/Modelfile:/Modelfile
     networks:
       - ollama-network
 
