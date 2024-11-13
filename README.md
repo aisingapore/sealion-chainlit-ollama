@@ -16,12 +16,12 @@
 - [Chainlit](https://github.com/Chainlit/chainlit)
 - [Ollama](https://ollama.com/)
 
-# Getting Started
-## Prerequisites
+## Getting Started
+### Prerequisites
 - Python 3.9 or newer
 - [Ollama](https://ollama.com/download)
 
-## Run the app
+### Run the app
 - Install [Ollama](https://ollama.com/download), if it is not already installed.
 - Pull the model.
   ```bash
@@ -47,14 +47,14 @@
 - Navigate to http://localhost:8000 to access the chatbot.
   <img width="924" alt="image" src="https://github.com/user-attachments/assets/517c527c-e730-434a-bb35-1550b938ffa2">
 
-# Getting Started with Docker
-## Prerequisites
+## Getting Started with Docker
+### Prerequisites
 - [Docker](https://docs.docker.com/engine/install/)
   - For the default [model](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct), set the memory limit to 6GB or more.
   - If a larger model is used, or if there are other active Docker containers in the environment, increase the memory limit further to take into account their memory requirements.
     <img width="600" alt="docker_resources" src="https://github.com/user-attachments/assets/069da8c8-66e9-4a9a-9820-9e2fcb5430f9">
 
-## Run the app with Docker
+### Run the app with Docker
 - Copy ```.env``` and update the values, if necessary:
   ```bash
   cp .env.example .env

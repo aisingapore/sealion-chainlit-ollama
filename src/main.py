@@ -35,6 +35,26 @@ settings = {
     "temperature": 0.8,
 }
 
+# Set the starters
+@cl.set_starters
+async def set_starters():
+    return [
+        cl.Starter(
+            label="Translation",
+            message="Translate a paragraph of a famous English speech to Indonesian.",
+            icon="/public/translate.svg",
+            ),
+        cl.Starter(
+            label="Summarise an essay",
+            message="Summarise a famous essay in 300 words.",
+            icon="/public/document.svg",
+            ),
+        cl.Starter(
+            label="AI Project idea",
+            message="Suggest an idea for an interesting AI project.",
+            icon="/public/idea.svg",
+            )
+        ]
 
 # Set the message response
 @cl.on_message
