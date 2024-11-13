@@ -1,5 +1,12 @@
 # Explore the AI Singapore SEA-LION model with Chainlit and Ollama
 
+## Overview
+- [Getting Started](#getting-started)
+- [Getting Started With Docker](#getting-started-with-docker)
+- [Default Model](#default-model)
+- [Customisations](#customisations)
+- [Acknowledgements](#acknowledgements)
+
 ## Meet the Cast
 - [AI Singapore SEA-LION](https://github.com/aisingapore/sealion)
   - Model: https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct
@@ -62,7 +69,6 @@
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
   <img width="924" alt="image" src="https://github.com/user-attachments/assets/517c527c-e730-434a-bb35-1550b938ffa2">
-
 
 ## Default Model
 - The default model is [llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m).
