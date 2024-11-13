@@ -9,6 +9,13 @@ services:
     healthcheck:
       test: ollama --version || exit 1
     command: serve
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     volumes:
       - ollama:/root/.ollama
     networks:
