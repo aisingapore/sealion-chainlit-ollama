@@ -24,7 +24,10 @@ except KeyError as e:
     sys.exit(1)
 
 # Initialise the client
-client = AsyncOpenAI(base_url=LLM_BASE_URL, api_key="-")
+client = AsyncOpenAI(
+    base_url=LLM_BASE_URL,
+    api_key="-"
+)
 
 # Set the model settings
 settings = {
@@ -45,14 +48,21 @@ async def on_message(message: cl.Message):
     Returns:
         None
     """
-    response = await client.chat.completions.create(
-        messages=[
-            {
-                "content": "You are a helpful bot created by AI Singapore. You provide clear and high quality answers.",
-                "role": "assistant",
-            },
-            {"content": message.content, "role": "user"},
-        ],
-        **settings,
+    message_history = cl.user_session.get("message_history")
+    if message_history is None:
+        message_history = []
+    message_history.append({"role": "user", "content": message.content})
+
+    msg = cl.Message(content="")
+    await msg.send()
+
+    stream = await client.chat.completions.create(
+        messages=message_history, stream=True, **settings
     )
-    await cl.Message(content=response.choices[0].message.content).send()
+
+    async for part in stream:
+        if token := part.choices[0].delta.content or "":
+            await msg.stream_token(token)
+
+    message_history.append({"role": "assistant", "content": msg.content})
+    await msg.update()
