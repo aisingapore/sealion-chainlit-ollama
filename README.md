@@ -2,19 +2,19 @@
 
 ## Overview
 - [Getting Started](#getting-started)
-- [Getting Started With Docker](#getting-started-with-docker)
+- [Getting Started with Docker](#getting-started-with-docker)
 - [Default Model](#default-model)
 - [Customisations](#customisations)
 - [Acknowledgements](#acknowledgements)
+
+> [!NOTE]
+> This project is designed for local environments. Do not run it in production.
 
 ## Meet the Cast
 - [AI Singapore SEA-LION](https://github.com/aisingapore/sealion)
   - Model: https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct
 - [Chainlit](https://github.com/Chainlit/chainlit)
 - [Ollama](https://ollama.com/)
-
-> [!NOTE]  
-> This project is designed for local environments. Do not run it in production.
 
 # Getting Started
 ## Prerequisites
