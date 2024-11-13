@@ -25,6 +25,10 @@
   python -m venv venv
   source venv/bin/activate
   ```
+- Copy ```.env``` and update the values, if necessary:
+  ```bash
+  cp .env.example .env
+  ```
 - Install the packages.
   ```
   pip install -r requirements.txt
@@ -33,6 +37,8 @@
   ```bash
   chainlit run src/main.py -w
   ```
+- Navigate to http://localhost:8000 to access the chatbot.
+  <img width="924" alt="image" src="https://github.com/user-attachments/assets/517c527c-e730-434a-bb35-1550b938ffa2">
 
 # Getting Started with Docker
 ## Prerequisites
