@@ -50,7 +50,7 @@ auto_tag_thread = true
 
 [UI]
 # Name of the assistant.
-name = "AI Singapore SEA-LION"
+name = "SEALION Chatbot"
 
 # Description of the assistant. This is used for HTML tags.
 # description = ""
