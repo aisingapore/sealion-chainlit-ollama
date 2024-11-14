@@ -39,7 +39,7 @@ async def set_starters():
     return [
         cl.Starter(
             label="Translate a speech",
-            message="Translate a paragraph of a famous English speech to Indonesian.",
+            message="Translate a paragraph of a famous speech to Indonesian.",
             icon="/public/translate.svg",
         ),
         cl.Starter(
@@ -49,7 +49,7 @@ async def set_starters():
         ),
         cl.Starter(
             label="Suggest an AI Project",
-            message="Suggest an idea for an interesting AI project.",
+            message="Suggest an idea for an interesting scientific AI project.",
             icon="/public/idea.svg",
         ),
     ]
