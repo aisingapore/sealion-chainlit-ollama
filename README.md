@@ -45,7 +45,7 @@
   chainlit run src/main.py -w
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
-  <img width="962" alt="Screenshot 2024-11-14 at 00 10 31" src="https://github.com/user-attachments/assets/f806331f-55bd-4858-8855-2d1b906fd913">
+  <img width="920" alt="image" src="https://github.com/user-attachments/assets/6ca473ad-e1bc-4bdb-aa85-c802416738e0">
 
 ## Getting Started with Docker
 > [!NOTE]
@@ -71,7 +71,7 @@
   docker compose exec ollama ollama pull aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
-  <img width="962" alt="Screenshot 2024-11-14 at 00 10 31" src="https://github.com/user-attachments/assets/f806331f-55bd-4858-8855-2d1b906fd913">
+  <img width="920" alt="image" src="https://github.com/user-attachments/assets/6ca473ad-e1bc-4bdb-aa85-c802416738e0">
 
 ## Default Model
 - The default model is [llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m).
