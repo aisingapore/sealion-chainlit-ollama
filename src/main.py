@@ -44,7 +44,7 @@ async def set_starters():
     """
     return [
         cl.Starter(
-            label="Translate a speech",
+            label="Translate a speech to Indonesian",
             message="Translate a well-known historical speech or literary text into Indonesian. Display the original text.",
             icon="/public/translate.svg",
         ),
@@ -52,6 +52,11 @@ async def set_starters():
             label="Summarise an essay",
             message="Summarise a famous essay in 300 words.",
             icon="/public/document.svg",
+        ),
+        cl.Starter(
+            label="Suggest tourist attractions in Thai",
+            message="สถานที่ท่องเที่ยวในเชียงใหม่มีอะไรบ้าง?",
+            icon="/public/travel.svg",
         ),
         cl.Starter(
             label="Suggest an AI Project",
