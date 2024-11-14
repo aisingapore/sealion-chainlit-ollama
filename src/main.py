@@ -44,7 +44,7 @@ async def set_starters():
     return [
         cl.Starter(
             label="Translate a speech",
-            message="Translate a paragraph of a famous speech to Indonesian.",
+            message="Translate a well-known historical speech or literary text into Indonesian. Display the original text.",
             icon="/public/translate.svg",
         ),
         cl.Starter(
@@ -85,6 +85,7 @@ async def on_message(message: cl.Message):
     await msg.send()
 
     # Generate a completion stream from the language model
+    # Ollama has built-in compatibility with the OpenAI Chat Completions API: https://ollama.com/blog/openai-compatibility
     stream = await client.chat.completions.create(
         messages=message_history, stream=True, **settings
     )
