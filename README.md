@@ -12,7 +12,7 @@
 
 ## Meet the Cast
 - [AI Singapore SEA-LION](https://github.com/aisingapore/sealion)
-  - Model: https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_0
+  - Model: https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m
 - [Chainlit](https://github.com/Chainlit/chainlit)
 - [Ollama](https://ollama.com/)
 
@@ -25,7 +25,7 @@
 - Install [Ollama](https://ollama.com/download), if it is not already installed.
 - Pull the model.
   ```bash
-  ollama pull aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_0
+  ollama pull aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m
   ```
 - In the project directory, create a virtual environment and activate it.
   ```bash
@@ -53,7 +53,7 @@
 
 ### Prerequisites
 - [Docker](https://docs.docker.com/engine/install/)
-  - For the default [model](https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_0), set the memory limit to 6GB or more.
+  - For the default [model](https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m), set the memory limit to 6GB or more.
   - If a larger model is used, or if there are other active Docker containers in the environment, increase the memory limit further to take into account their memory requirements.
     <img width="600" alt="docker_resources" src="https://github.com/user-attachments/assets/069da8c8-66e9-4a9a-9820-9e2fcb5430f9">
 
@@ -68,13 +68,13 @@
   ```
 - Pull the SEA-LION model with Ollama:
   ```bash
-  docker compose exec ollama ollama pull aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_0
+  docker compose exec ollama ollama pull aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
   <img width="920" alt="image" src="https://github.com/user-attachments/assets/6ca473ad-e1bc-4bdb-aa85-c802416738e0">
 
 ## Default Model
-- The default model is [gemma2-9b-cpt-sea-lionv3-instruct:q4_0](https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_0).
+- The default model is [gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m](https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m).
 - If you would like to test the other models, choose the model in https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct.
   - Check that there is sufficient disk storage and memory. For example, [gemma2-9b-cpt-sea-lionv3-instruct:q8_0](https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q8_0) requires at least 10GB of disk storage and 12GB of available memory in Docker.
   - Pull the model with Ollama.
