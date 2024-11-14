@@ -48,6 +48,9 @@
   <img width="962" alt="Screenshot 2024-11-14 at 00 10 31" src="https://github.com/user-attachments/assets/f806331f-55bd-4858-8855-2d1b906fd913">
 
 ## Getting Started with Docker
+> [!NOTE]
+> At the time of writing, [GPU support in Docker Desktop](https://docs.docker.com/desktop/features/gpu/) is only available on Windows with the WSL2 backend.
+
 ### Prerequisites
 - [Docker](https://docs.docker.com/engine/install/)
   - For the default [model](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct), set the memory limit to 6GB or more.
