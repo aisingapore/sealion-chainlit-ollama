@@ -45,9 +45,12 @@
   chainlit run src/main.py -w
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
-  <img width="924" alt="image" src="https://github.com/user-attachments/assets/517c527c-e730-434a-bb35-1550b938ffa2">
+  <img width="920" alt="image" src="https://github.com/user-attachments/assets/6ca473ad-e1bc-4bdb-aa85-c802416738e0">
 
 ## Getting Started with Docker
+> [!NOTE]
+> At the time of writing, [GPU support in Docker Desktop](https://docs.docker.com/desktop/features/gpu/) is only available on Windows with the WSL2 backend.
+
 ### Prerequisites
 - [Docker](https://docs.docker.com/engine/install/)
   - For the default [model](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct), set the memory limit to 6GB or more.
@@ -68,7 +71,7 @@
   docker compose exec ollama ollama pull aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct
   ```
 - Navigate to http://localhost:8000 to access the chatbot.
-  <img width="924" alt="image" src="https://github.com/user-attachments/assets/517c527c-e730-434a-bb35-1550b938ffa2">
+  <img width="920" alt="image" src="https://github.com/user-attachments/assets/6ca473ad-e1bc-4bdb-aa85-c802416738e0">
 
 ## Default Model
 - The default model is [llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m](https://ollama.com/aisingapore/llama3-8b-cpt-sea-lionv2.1-instruct:q4_k_m).

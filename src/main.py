@@ -1,6 +1,5 @@
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
-from typing import Dict, Optional
 import chainlit as cl
 import logging
 import os
@@ -24,10 +23,7 @@ except KeyError as e:
     sys.exit(1)
 
 # Initialise the client
-client = AsyncOpenAI(
-    base_url=LLM_BASE_URL,
-    api_key="-"
-)
+client = AsyncOpenAI(base_url=LLM_BASE_URL, api_key="-")
 
 # Set the model settings
 settings = {
@@ -35,26 +31,34 @@ settings = {
     "temperature": 0.8,
 }
 
+
 # Set the starters
 @cl.set_starters
 async def set_starters():
+    """
+    Define a set of starter prompts that users can choose from.
+
+    Returns:
+        list: A list of cl.Starter objects each containing a label, message, and icon.
+    """
     return [
         cl.Starter(
-            label="Translation",
-            message="Translate a paragraph of a famous English speech to Indonesian.",
+            label="Translate a speech",
+            message="Translate a well-known historical speech or literary text into Indonesian. Display the original text.",
             icon="/public/translate.svg",
-            ),
+        ),
         cl.Starter(
             label="Summarise an essay",
             message="Summarise a famous essay in 300 words.",
             icon="/public/document.svg",
-            ),
+        ),
         cl.Starter(
-            label="AI Project idea",
-            message="Suggest an idea for an interesting AI project.",
+            label="Suggest an AI Project",
+            message="Suggest an idea for an interesting scientific AI project.",
             icon="/public/idea.svg",
-            )
-        ]
+        ),
+    ]
+
 
 # Set the message response
 @cl.on_message
@@ -68,21 +72,29 @@ async def on_message(message: cl.Message):
     Returns:
         None
     """
+    # Retrieve the current message history from the user session
     message_history = cl.user_session.get("message_history")
     if message_history is None:
         message_history = []
+
+    # Add the user's message to the message history
     message_history.append({"role": "user", "content": message.content})
 
+    # Create a new message object to send the response
     msg = cl.Message(content="")
     await msg.send()
 
+    # Generate a completion stream from the language model
+    # Ollama has built-in compatibility with the OpenAI Chat Completions API: https://ollama.com/blog/openai-compatibility
     stream = await client.chat.completions.create(
         messages=message_history, stream=True, **settings
     )
 
+    # Stream tokens from the model's response and update the message
     async for part in stream:
         if token := part.choices[0].delta.content or "":
             await msg.stream_token(token)
 
+    # Add the assistant's response to the message history and update the message
     message_history.append({"role": "assistant", "content": msg.content})
     await msg.update()
