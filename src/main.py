@@ -18,6 +18,7 @@ logging.basicConfig(level=logging.INFO)
 try:
     LLM_BASE_URL = os.environ["LLM_BASE_URL"]
     LLM_MODEL = os.environ["LLM_MODEL"]
+    LLM_TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE", "0.8"))
 except KeyError as e:
     logging.error(f"The environment variable {e} is not defined.")
     sys.exit(1)
@@ -28,7 +29,7 @@ client = AsyncOpenAI(base_url=LLM_BASE_URL, api_key="-")
 # Set the model settings
 settings = {
     "model": LLM_MODEL,
-    "temperature": 0.8,
+    "temperature": LLM_TEMPERATURE,
 }
 
 
