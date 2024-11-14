@@ -1,6 +1,5 @@
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
-from typing import Dict, Optional
 import chainlit as cl
 import logging
 import os
@@ -36,6 +35,12 @@ settings = {
 # Set the starters
 @cl.set_starters
 async def set_starters():
+    """
+    Define a set of starter prompts that users can choose from.
+
+    Returns:
+        list: A list of cl.Starter objects each containing a label, message, and icon.
+    """
     return [
         cl.Starter(
             label="Translate a speech",
@@ -67,21 +72,28 @@ async def on_message(message: cl.Message):
     Returns:
         None
     """
+    # Retrieve the current message history from the user session
     message_history = cl.user_session.get("message_history")
     if message_history is None:
         message_history = []
+
+    # Add the user's message to the message history
     message_history.append({"role": "user", "content": message.content})
 
+    # Create a new message object to send the response
     msg = cl.Message(content="")
     await msg.send()
 
+    # Generate a completion stream from the language model
     stream = await client.chat.completions.create(
         messages=message_history, stream=True, **settings
     )
 
+    # Stream tokens from the model's response and update the message
     async for part in stream:
         if token := part.choices[0].delta.content or "":
             await msg.stream_token(token)
 
+    # Add the assistant's response to the message history and update the message
     message_history.append({"role": "assistant", "content": msg.content})
     await msg.update()
