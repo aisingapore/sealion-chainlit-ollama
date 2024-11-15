@@ -13,12 +13,12 @@
 ## Meet the Cast
 - [AI Singapore SEA-LION](https://github.com/aisingapore/sealion)
   - Model: https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m
-- [Chainlit](https://github.com/Chainlit/chainlit)
+- [Chainlit](https://chainlit.io/)
 - [Ollama](https://ollama.com/)
 
 ## Getting Started
 ### Prerequisites
-- Python 3.9 or newer
+- Python 3.8 or newer
 - [Ollama](https://ollama.com/download)
 
 ### Run the app
