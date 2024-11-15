@@ -27,9 +27,12 @@
   ```bash
   ollama pull aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m
   ```
-- In the project directory, create a virtual environment and activate it.
+- In the project directory, create a virtual environment.
   ```bash
   python -m venv venv
+  ```
+- Activate the virtual environment.
+  ```bash
   source venv/bin/activate
   ```
 - Copy ```.env``` and update the values, if necessary:
