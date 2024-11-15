@@ -32,6 +32,15 @@ settings = {
     "temperature": LLM_TEMPERATURE,
 }
 
+# Initialise the message history
+initial_message_history = [
+    {
+        "role": "user",
+        "content": "You are SEA-LION Chatbot, a helpful and knowledgeable assistant.",
+    }
+]
+message_history = initial_message_history
+
 
 # Set the starters
 @cl.set_starters
@@ -66,6 +75,13 @@ async def set_starters():
     ]
 
 
+# A new chat session is created
+@cl.on_chat_start
+def on_chat_start():
+    # Reset the message history
+    message_history = initial_message_history
+
+
 # Set the message response
 @cl.on_message
 async def on_message(message: cl.Message):
@@ -78,11 +94,6 @@ async def on_message(message: cl.Message):
     Returns:
         None
     """
-    # Retrieve the current message history from the user session
-    message_history = cl.user_session.get("message_history")
-    if message_history is None:
-        message_history = []
-
     # Add the user's message to the message history
     message_history.append({"role": "user", "content": message.content})
 

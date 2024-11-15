@@ -13,12 +13,12 @@
 ## Meet the Cast
 - [AI Singapore SEA-LION](https://github.com/aisingapore/sealion)
   - Model: https://ollama.com/aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m
-- [Chainlit](https://github.com/Chainlit/chainlit)
+- [Chainlit](https://chainlit.io/)
 - [Ollama](https://ollama.com/)
 
 ## Getting Started
 ### Prerequisites
-- Python 3.9 or newer
+- Python 3.8 or newer
 - [Ollama](https://ollama.com/download)
 
 ### Run the app
@@ -27,9 +27,12 @@
   ```bash
   ollama pull aisingapore/gemma2-9b-cpt-sea-lionv3-instruct:q4_k_m
   ```
-- In the project directory, create a virtual environment and activate it.
+- In the project directory, create a virtual environment.
   ```bash
   python -m venv venv
+  ```
+- Activate the virtual environment.
+  ```bash
   source venv/bin/activate
   ```
 - Copy ```.env``` and update the values, if necessary:
